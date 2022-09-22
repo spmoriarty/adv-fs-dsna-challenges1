@@ -1,7 +1,8 @@
 const { 
   reverseSentence,
   capitalizeFirstLetter,
-  addPunc
+  addPunc,
+  OddEve
 
 } = require('./index');
 
@@ -23,4 +24,9 @@ it('will add punctuation', () => {
   const stop = addA('go');
   expect(stop).toEqual('go!!');
   expect(addB('where')).toEqual('where?');
+});
+
+it('Odd or evenish challenge', () => {
+  expect(OddEve('234')).toEqual('evenish');
+  expect(OddEve('345')).toEqual('oddish');
 });

@@ -17,7 +17,14 @@ function capitalizeFirstLetter(string) {
 function addPunc(string) {
   return function addPunc(x) {
     return (`${x}${string}`);
-  }
+  };
+}
+
+//Oddish or evenish challenge
+function OddEve(number) {
+  let numeral = 0;
+  String(number).split('').map(number => numeral += Number(number));
+  return numeral % 2 === 0 ? 'oddish' : 'evenish';
 }
 
 
@@ -25,4 +32,4 @@ function addPunc(string) {
 
 
 
-module.exports = { reverseSentence, capitalizeFirstLetter, addPunc };
+module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve };
