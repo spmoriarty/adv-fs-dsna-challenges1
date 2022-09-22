@@ -4,7 +4,8 @@ const {
   addPunc,
   OddEve,
   anagram,
-  findArr
+  findArr,
+  Red
 
 } = require('./index');
 
@@ -46,4 +47,9 @@ it('finds an array', () => {
   const arr = [1, 2, 3, 4];
   expect(findArr(arr, 2)).toEqual(3);
   expect(findArr(arr, -1)).toEqual(4);
+});
+
+it('finds the root digit', () => {
+  expect(Red(123)).toEqual(6);
+  expect(Red(4322)).toEqual(2);
 });

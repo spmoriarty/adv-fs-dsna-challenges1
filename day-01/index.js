@@ -37,7 +37,14 @@ function findArr(arr, i) {
   return i >= 0 ? arr[i] : arr[arr.length + i];
 }
 
+function Red(n) {
+  const red = n.toString().split('');
+  const num = red.map(a => + a);
+  const sum = num.reduce((b, c) => b + c);
+  return String(sum).split('').length === 1 ? sum : Red(sum);
+}
 
 
 
-module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve, anagram, findArr };
+
+module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve, anagram, findArr, Red };
