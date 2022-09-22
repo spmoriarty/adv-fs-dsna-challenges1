@@ -5,7 +5,8 @@ const {
   OddEve,
   anagram,
   findArr,
-  Red
+  Red,
+  multiples
 
 } = require('./index');
 
@@ -52,4 +53,9 @@ it('finds an array', () => {
 it('finds the root digit', () => {
   expect(Red(123)).toEqual(6);
   expect(Red(4322)).toEqual(2);
+});
+
+it('multiplies of a given number', () => {
+  expect(multiples(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+  expect(multiples(25)).toEqual([25, 50]);
 });

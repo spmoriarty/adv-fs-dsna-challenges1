@@ -44,7 +44,16 @@ function Red(n) {
   return String(sum).split('').length === 1 ? sum : Red(sum);
 }
 
+function multiples(n) {
+  const array = [];
+  if (n >= 50) return array;
+  for (let i = 1; i <= 50; i++) {
+    if (i % n === 0) array.push(i);
+  }
+  return array;
+}
 
 
 
-module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve, anagram, findArr, Red };
+
+module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve, anagram, findArr, Red, multiples };
