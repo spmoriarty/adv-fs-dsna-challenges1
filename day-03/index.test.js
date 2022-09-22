@@ -11,7 +11,7 @@ describe('node based data structures', () => {
     expect(1).toBe(1);
   });
 
-  it('Should show B as the root of A,C,D', () => {
+  it('Should show B(5) as the root of A(1),C(8),D(9)', () => {
     const tree = new BinaryTreeNode(5);
     tree.add(1);
     tree.add(8);
