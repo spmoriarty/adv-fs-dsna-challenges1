@@ -1,4 +1,5 @@
 const { Queue } = require('../Queue.js');
+const { Stack } = require('../Stack.js');
 
 describe('Queing', () => {
   it('The queue adds an item', () => {
@@ -13,5 +14,22 @@ describe('Queing', () => {
     expect(queue.hasNext()).toEqual(true);
     queue.dequeue();
     expect(queue.hasNext()).toEqual(false);
+  });
+});
+
+describe('Stacking', () => {
+  it('adds an item to the back of the stack', () => {
+    const stack = new Stack();
+    stack.push('aeroplane');
+    expect(stack.peek()).toEqual('aeroplane');
+  });
+
+  it('removes the last item in a stack', () => {
+    const stack = new Stack();
+    stack.push('upwards');
+    stack.push('halloween');
+    expect(stack.peek()).toEqual('halloween');
+    stack.pop();
+    expect(stack.peek()).toEqual('upwards');
   });
 });
