@@ -7,10 +7,17 @@ function reverseSentence(str) {
 //Title-case-words
 
 function capitalizeFirstLetter(string) {
-  const words = string.split(" ");
-  words.map((word) => { 
-      return word[0].toUpperCase() + word.substring(1); 
-  }).join(" ");
+  return string
+    .split(' ')
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+//add punctuation
+function addPunc(string) {
+  return function addPunc(x) {
+    return (`${x}${string}`);
+  }
 }
 
 
@@ -18,4 +25,4 @@ function capitalizeFirstLetter(string) {
 
 
 
-module.exports = { reverseSentence, capitalizeFirstLetter };
+module.exports = { reverseSentence, capitalizeFirstLetter, addPunc };
