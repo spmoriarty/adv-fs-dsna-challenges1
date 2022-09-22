@@ -33,8 +33,11 @@ function anagram(string1, string2) {
   return fire.map(letter => water.includes(letter)).includes(true) ? true : false;
 }
 
+function findArr(arr, i) {
+  return i >= 0 ? arr[i] : arr[arr.length + i];
+}
 
 
 
 
-module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve, anagram };
+module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve, anagram, findArr };

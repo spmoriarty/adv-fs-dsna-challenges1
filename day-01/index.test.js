@@ -3,7 +3,8 @@ const {
   capitalizeFirstLetter,
   addPunc,
   OddEve,
-  anagram
+  anagram,
+  findArr
 
 } = require('./index');
 
@@ -39,4 +40,10 @@ it('anagram challenge', () => {
   const two = 'hot';
   expect(anagram(wordA, wordB)).toEqual(true);
   expect(anagram(one, two)).toEqual(false);
+});
+
+it('finds an array', () => {
+  const arr = [1, 2, 3, 4];
+  expect(findArr(arr, 2)).toEqual(3);
+  expect(findArr(arr, -1)).toEqual(4);
 });
