@@ -27,9 +27,14 @@ function OddEve(number) {
   return numeral % 2 === 0 ? 'oddish' : 'evenish';
 }
 
+function anagram(string1, string2) {
+  const fire = string1.split('');
+  const water = string2.split('');
+  return fire.map(letter => water.includes(letter)).includes(true) ? true : false;
+}
 
 
 
 
 
-module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve };
+module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve, anagram };

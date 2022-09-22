@@ -2,7 +2,8 @@ const {
   reverseSentence,
   capitalizeFirstLetter,
   addPunc,
-  OddEve
+  OddEve,
+  anagram
 
 } = require('./index');
 
@@ -29,4 +30,13 @@ it('will add punctuation', () => {
 it('Odd or evenish challenge', () => {
   expect(OddEve('234')).toEqual('evenish');
   expect(OddEve('345')).toEqual('oddish');
+});
+
+it('anagram challenge', () => {
+  const wordA = 'water';
+  const wordB = 'wet';
+  const one = 'fire';
+  const two = 'hot';
+  expect(anagram(wordA, wordB)).toEqual(true);
+  expect(anagram(one, two)).toEqual(false);
 });
