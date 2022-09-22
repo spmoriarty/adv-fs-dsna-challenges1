@@ -53,7 +53,18 @@ function multiples(n) {
   return array;
 }
 
+function fizzBuzz(num) {
+  const array = [];
+  for (let i = 1; i <= num; i++)
+    if(i % 3 === 0 && i % 5 === 0) {
+      array.push('fizzBuzz');
+    } else if (i % 3 === 0) {
+      array.push('fizz');
+    } else if (i % 5 === 0) {
+      array.push('buzz');
+    } else array.push(i);
+  return array;
+}
 
 
-
-module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve, anagram, findArr, Red, multiples };
+module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve, anagram, findArr, Red, multiples, fizzBuzz };

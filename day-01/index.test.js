@@ -6,7 +6,8 @@ const {
   anagram,
   findArr,
   Red,
-  multiples
+  multiples,
+  fizzBuzz
 
 } = require('./index');
 
@@ -59,3 +60,24 @@ it('multiplies of a given number', () => {
   expect(multiples(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
   expect(multiples(25)).toEqual([25, 50]);
 });
+
+it('the fizzBuzz game!', () => {
+  const array = [
+    1, 2, 
+    'fizz',
+    4,
+    'buzz',
+    'fizz',
+    7,
+    8,
+    'fizz',
+    'buzz',
+    11,
+    'fizz',
+    13,
+    14,
+    'fizzBuzz'
+  ];
+  expect(fizzBuzz(15)).toEqual(array);
+});
+
