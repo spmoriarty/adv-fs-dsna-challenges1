@@ -16,7 +16,11 @@ class Stack {
   pop() {
     return this.#list.pop();
   }
-    
+  
+
+  flipItnReverseIt() {
+    return this.#list.split().map((word) => word.split('').reverse().join('')).reverse();
+  }
 
 }
 

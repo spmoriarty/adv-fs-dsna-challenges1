@@ -32,4 +32,12 @@ describe('Stacking', () => {
     stack.pop();
     expect(stack.peek()).toEqual('upwards');
   });
+
+});
+
+describe('I put my thang down, flip it and reverse it', () => {
+  it('Is it worth it? Let me work it', () => {
+    const missy = new Stack('I put my thang down, flip it and reverse it');
+    expect(missy.flipItnReverseIt()).toEqual(['ti esrever dna ti pilf ,nwod gnaht ym tup I']);
+  });
 });
