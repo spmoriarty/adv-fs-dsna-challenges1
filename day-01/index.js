@@ -4,4 +4,67 @@ function reverseSentence(str) {
     .map((word) => word.split('').reverse().join(''))
     .join(' ');
 }
-module.exports = { reverseSentence };
+//Title-case-words
+
+function capitalizeFirstLetter(string) {
+  return string
+    .split(' ')
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+//add punctuation
+function addPunc(string) {
+  return function addPunc(x) {
+    return (`${x}${string}`);
+  };
+}
+
+//Oddish or evenish challenge
+function OddEve(number) {
+  let numeral = 0;
+  String(number).split('').map(number => numeral += Number(number));
+  return numeral % 2 === 0 ? 'oddish' : 'evenish';
+}
+
+function anagram(string1, string2) {
+  const fire = string1.split('');
+  const water = string2.split('');
+  return fire.map(letter => water.includes(letter)).includes(true) ? true : false;
+}
+
+function findArr(arr, i) {
+  return i >= 0 ? arr[i] : arr[arr.length + i];
+}
+
+function Red(n) {
+  const red = n.toString().split('');
+  const num = red.map(a => + a);
+  const sum = num.reduce((b, c) => b + c);
+  return String(sum).split('').length === 1 ? sum : Red(sum);
+}
+
+function multiples(n) {
+  const array = [];
+  if (n >= 50) return array;
+  for (let i = 1; i <= 50; i++) {
+    if (i % n === 0) array.push(i);
+  }
+  return array;
+}
+
+function fizzBuzz(num) {
+  const array = [];
+  for (let i = 1; i <= num; i++)
+    if(i % 3 === 0 && i % 5 === 0) {
+      array.push('fizzBuzz');
+    } else if (i % 3 === 0) {
+      array.push('fizz');
+    } else if (i % 5 === 0) {
+      array.push('buzz');
+    } else array.push(i);
+  return array;
+}
+
+
+module.exports = { reverseSentence, capitalizeFirstLetter, addPunc, OddEve, anagram, findArr, Red, multiples, fizzBuzz };
